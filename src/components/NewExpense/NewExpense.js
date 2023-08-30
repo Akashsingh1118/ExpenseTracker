@@ -13,7 +13,7 @@ function NewExpense(props) {
   function onSaveExpenseDataHandler(enteredExpenseData) {
     const expenseData = {
       ...enteredExpenseData,
-      id: crypto.randomUUID()
+      id: crypto.randomUUID(),
     };
     props.onAddExpense(expenseData);
     setIsFormOpen(false);

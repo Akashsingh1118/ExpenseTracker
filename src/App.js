@@ -1,20 +1,24 @@
 import { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+
 function App() {
-  const [expenses, setExpense] = useState([]);
+  const [expenses, setExpenses] = useState([]);
+
   function onAddExpenseHandler(expense) {
-    setExpense((prevExpense) => {
+    setExpenses((prevExpense) => {
       return [expense, ...prevExpense];
     });
   }
+
   function onChangeExpenseHandler(id) {
-    setExpense((prevExpense) => {
+    setExpenses((prevExpense) => {
       return prevExpense.filter((expense) => {
         return expense.id !== id;
       });
     });
   }
+
   return (
     <div>
       <NewExpense onAddExpense={onAddExpenseHandler} />
