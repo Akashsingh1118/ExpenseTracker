@@ -6,7 +6,7 @@ import ExpensesList from "./ExpensesList";
 import ExpensesChart from "./ExpensesChart";
 
 function ExpenseList(props) {
-  const [filteredYear, setFilteredYear] = useState("2023");
+  const [filteredYear, setFilteredYear] = useState("2024");
 
   function onYearFilterHandler(selectedYear) {
     setFilteredYear(selectedYear);

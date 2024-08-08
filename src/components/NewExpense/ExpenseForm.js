@@ -18,7 +18,7 @@ function ExpenseForm(props) {
     setEnteredDate(event.target.value);
   }
 
-  function onSumitHandler(event) {
+  function onSubmitHandler(event) {
     event.preventDefault();
     const expenseData = {
       title: enteredTitle,
@@ -32,7 +32,7 @@ function ExpenseForm(props) {
   }
 
   return (
-    <form onSubmit={onSumitHandler}>
+    <form onSubmit={onSubmitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
@@ -58,7 +58,7 @@ function ExpenseForm(props) {
             type="date"
             value={enteredDate}
             min="2019-01-01"
-            max="2023-12-31"
+            max="2025-12-31"
             onChange={dateChangeHandler}
           />
         </div>
